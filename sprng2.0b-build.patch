@@ -1,0 +1,29 @@
+--- sprng2.0/TESTS/metropolis.c.orig	2012-02-15 21:43:17.421524149 -0200
++++ sprng2.0/TESTS/metropolis.c	2012-02-15 21:43:38.188651152 -0200
+@@ -154,7 +154,7 @@ void metropolis(int block_size, int use_
+  
+   #ifdef SYNC
+     printf("\n\tStreams are synchronized!\n");
+-  #elif !SYNC
++  #else
+     printf("\n\tStreams are not synchronized!\n");
+   #endif
+ printf("         \tEnergy\t\tEnergy_error\tSigma_Energy\tCv\t\tCv_error\tSigma_Cv\n");
+@@ -169,7 +169,7 @@ printf("         \tEnergy\t\tEnergy_erro
+ 	dE = energy_difference(k);
+ #ifdef SYNC
+ 	if(expJ[dE]>sprng(genptr[k])){ 
+-#elif !SYNC
++#else
+ 	if(dE<=0 || expJ[dE]>sprng(genptr[k])){ 
+ #endif
+ 	  energy += dE;
+@@ -321,7 +321,7 @@ void thermalize(int block_size, int disc
+ 	dE = energy_difference(k);
+ #ifdef SYNC
+ 	if(expJ[dE]>sprng(genptr[k])) 
+-#elif !SYNC
++#else
+ 	if(dE<=0 || expJ[dE]>sprng(genptr[k]))
+ #endif
+ 	{    
