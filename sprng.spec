@@ -56,3 +56,11 @@ make
 mkdir -p %{buildroot}{%{_includedir}/sprng,%{_libdir}}
 install -m 644 include/*.h %{buildroot}%{_includedir}/sprng
 install -m 644 lib/*.a %{buildroot}%{_libdir}
+
+
+%changelog
+* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0b-1
++ Revision: 774611
+- Import sprng 2.0
+- Import sprng 2.0
+
