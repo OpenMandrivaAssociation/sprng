@@ -1,6 +1,6 @@
 Name:		sprng
-Version:	2.0b
-Release:	2
+Version:	5.0
+Release:	1
 Group:		Sciences/Mathematics
 License:	GPL
 Summary:	Scalable Parallel Pseudo Random Number Generators Library
