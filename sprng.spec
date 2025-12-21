@@ -6,6 +6,7 @@ License:	GPL
 Summary:	Scalable Parallel Pseudo Random Number Generators Library
 Source0:	http://sprng.cs.fsu.edu/Version2.0/sprng2.0b.tar.gz
 URL:		https://sprng.cs.fsu.edu/
+BuildRequires:	make
 BuildRequires:	openmpi
 BuildRequires:	gmp-devel
 Requires:	sprng-devel
